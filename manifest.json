@@ -1,11 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "My Extension",
+  "name": "Eye Care Reminder",
   "version": "1.0.0",
-  "description": "A sample Chrome extension",
+  "description": "Protect your eyes with 20-20-20 rule reminders, break notifications, and posture tips",
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "notifications",
+    "alarms"
   ],
   "background": {
     "service_worker": "background.js"
@@ -18,7 +20,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "My Extension",
+    "default_title": "Eye Care Reminder",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",

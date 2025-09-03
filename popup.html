@@ -6,10 +6,43 @@
 </head>
 <body>
     <div class="container">
-        <h1>My Extension</h1>
-        <p>Welcome to your Chrome extension!</p>
-        <button id="actionBtn">Click Me</button>
-        <div id="output"></div>
+        <header>
+            <h1>👁️ Eye Care Reminder</h1>
+            <div class="status" id="timerStatus">Timer Off</div>
+        </header>
+        
+        <div class="timer-section">
+            <div class="timer-display" id="timerDisplay">20:00</div>
+            <div class="timer-controls">
+                <button id="startBtn" class="btn-primary">Start Timer</button>
+                <button id="pauseBtn" class="btn-secondary" disabled>Pause</button>
+                <button id="resetBtn" class="btn-secondary">Reset</button>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <h3>Today's Stats</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="breaksToday">0</span>
+                    <span class="stat-label">Breaks Taken</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="screenTime">0h</span>
+                    <span class="stat-label">Screen Time</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tips-section">
+            <h3>💡 Eye Care Tip</h3>
+            <p id="dailyTip">Follow the 20-20-20 rule: Every 20 minutes, look at something 20 feet away for 20 seconds.</p>
+        </div>
+        
+        <div class="settings-section">
+            <button id="settingsBtn" class="btn-link">⚙️ Settings</button>
+            <button id="postureBtn" class="btn-link">🧘 Posture Tips</button>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>

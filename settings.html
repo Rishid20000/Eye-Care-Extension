@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <header>
+            <h1>⚙️ Eye Care Settings</h1>
+            <button id="closeSettings" class="close-btn">×</button>
+        </header>
+        
+        <div class="settings-content">
+            <div class="setting-group">
+                <h3>🕐 Reminder Interval</h3>
+                <p>How often should you be reminded to take a break?</p>
+                <div class="timer-options">
+                    <div class="timer-option">
+                        <input type="radio" id="timer10" name="timerInterval" value="10">
+                        <label for="timer10">10 minutes <span class="desc">(Frequent)</span></label>
+                    </div>
+                    <div class="timer-option">
+                        <input type="radio" id="timer15" name="timerInterval" value="15">
+                        <label for="timer15">15 minutes <span class="desc">(Moderate)</span></label>
+                    </div>
+                    <div class="timer-option">
+                        <input type="radio" id="timer20" name="timerInterval" value="20">
+                        <label for="timer20">20 minutes <span class="desc">(Recommended)</span></label>
+                    </div>
+                    <div class="timer-option">
+                        <input type="radio" id="timer30" name="timerInterval" value="30">
+                        <label for="timer30">30 minutes <span class="desc">(Relaxed)</span></label>
+                    </div>
+                    <div class="timer-option custom-option">
+                        <input type="radio" id="timerCustom" name="timerInterval" value="custom">
+                        <label for="timerCustom">Custom: 
+                            <input type="number" id="customMinutes" min="5" max="60" value="25" class="custom-input"> minutes
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <h3>⏱️ Break Duration</h3>
+                <p>How long should the break reminder stay on screen?</p>
+                <select id="breakDuration">
+                    <option value="15">15 seconds</option>
+                    <option value="20" selected>20 seconds (Recommended)</option>
+                    <option value="30">30 seconds</option>
+                    <option value="45">45 seconds</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <h3>🔔 Notifications</h3>
+                <p>Choose your notification preferences</p>
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <input type="checkbox" id="desktopNotifications" checked>
+                        <label for="desktopNotifications">Desktop Notifications</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="checkbox" id="screenOverlay" checked>
+                        <label for="screenOverlay">Full Screen Break Overlay</label>
+                    </div>
+                    <div class="toggle-item">
+                        <input type="checkbox" id="soundAlerts">
+                        <label for="soundAlerts">Sound Alerts (Coming Soon)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <h3>📊 Statistics</h3>
+                <p>Manage your eye care tracking data</p>
+                <button id="resetStats" class="reset-btn">Reset Today's Statistics</button>
+                <button id="exportStats" class="export-btn">Export Statistics (Coming Soon)</button>
+            </div>
+        </div>
+        
+        <div class="settings-footer">
+            <button id="saveSettings" class="save-btn">💾 Save Settings</button>
+            <button id="cancelSettings" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
